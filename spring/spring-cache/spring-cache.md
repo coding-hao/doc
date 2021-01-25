@@ -4,7 +4,7 @@
 * 2.	从 SSD 读取 1MB 的顺序数据，大约需要 1ms，换算成人类时间是 1个月。
 由此可见，内存和硬盘的差距，相当于拖拉机和法拉利的差距。
 # 为什么要用Caffeine
-&ensp;&ensp;&ensp;&ensp;在[Java本地缓存神器---Caffeine（一）](https://mp.weixin.qq.com/s/8OWS1asuZ7dWxMimHOQ-TQ)里面已经介绍了caffeine和其他缓存框架的性能对比，结果显示，caffeine的性能远远强于其他缓存框架。如果想要了解关于caffeine更多的知识，可以看[Java本地缓存神器---Caffeine（一）](https://juejin.cn/post/6919817359343484935)，
+&ensp;&ensp;&ensp;&ensp;在[Java本地缓存神器---Caffeine（一）](https://mp.weixin.qq.com/s/8OWS1asuZ7dWxMimHOQ-TQ)里面已经介绍了caffeine和其他缓存框架的性能对比，结果显示，caffeine的性能远远强于其他缓存框架。如果想要了解关于caffeine更多的知识，可以看[Java本地缓存神器---Caffeine（一）](https://mp.weixin.qq.com/s/8OWS1asuZ7dWxMimHOQ-TQ)，
 [Java本地缓存神器---Caffeine（二）](https://mp.weixin.qq.com/s/DiT6cWoH6Gl4pEVvHRbfMg)这两篇文章。  
 
 # SpringBoot整合caffeine
@@ -261,7 +261,7 @@ public class BookController {
 ![](https://mmbiz.qpic.cn/mmbiz_png/FcNb6Xk2BKCj9Gg6ApicOVuPUOWoaMenDDnkVLoCL6tadcE8exPdVZdGpODDyn8cHWMfB8Zr3AeYseiaoneHIvMw/0?wx_fmt=png)  
 &ensp;&ensp;&ensp;&ensp;可以看到第二次访问的时候，是直接从缓存中查询的数据，并没有从数据库重新加载
 #### (2) 超过五秒之后再访问 http://localhost:8080/book/get/2
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0b735fbf944e4b18aceffaa2a53ea070~tplv-k3u1fbpfcp-watermark.image)  
+![](https://mmbiz.qpic.cn/mmbiz_png/FcNb6Xk2BKCj9Gg6ApicOVuPUOWoaMenDJCkeY1eKS31blKfdSOSgthSvWf1jqzAsLhxx0suv2JicjHAoawxEHkQ/0?wx_fmt=png)  
 我们能看到会重新从数据库加载数据，并且会caffeine访问时间的回收策略
 #### (3) 测试修改对缓存的影响
 &ensp;&ensp;&ensp;&ensp; 先连续两次访问 http://localhost:8080/book/get/2 ，五秒之内再

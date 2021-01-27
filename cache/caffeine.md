@@ -1,4 +1,4 @@
-# 一文掌握Java本地缓存神器—Caffeine
+# 全网最全的Java本地缓存神器—Caffeine讲解
 ## 前言
 &ensp;&ensp;&ensp;&ensp;Caffeine是基于Java8的高性能缓存库，参考了Google guava的API，基于Guava Cache和ConcurrentLinkedHashMap的经验改进而来。
 ### 性能对比
@@ -328,7 +328,7 @@ private static byte[] loadDB(String key) {
 }
 ```
 ##### ②　弱引用
-&ensp;&ensp;&ensp;&ensp;当GC时，会触发弱引用回收策略。 　　
+&ensp;&ensp;&ensp;&ensp;当GC时，会触发弱引用回收策略。  
 &ensp;&ensp;&ensp;&ensp;设置jvm启动时-XX:+PrintGCDetails -Xmx100m 参数，可以看GC日志打印会触发弱引用的回收策略。
 ```
 private static void weakKeys() throws InterruptedException {
@@ -473,5 +473,5 @@ public static void statistics() throws InterruptedException {
 }
 ```
 欢迎大家关注微信公众号：CodingTao
-![](https://mmbiz.qpic.cn/mmbiz_jpg/FcNb6Xk2BKCUOFt46Ydqx52K7vXugiaSxB1a72ic1Bq05Xc32jBREn1LiaicAAtZyLRUbU35bl8rJWSz35IYIWGypw/0?wx_fmt=jpeg)
+<div><img src="https://mmbiz.qpic.cn/mmbiz_jpg/FcNb6Xk2BKCUOFt46Ydqx52K7vXugiaSxB1a72ic1Bq05Xc32jBREn1LiaicAAtZyLRUbU35bl8rJWSz35IYIWGypw/0?wx_fmt=jpeg"\></div>
 
